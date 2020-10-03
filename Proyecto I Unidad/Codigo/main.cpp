@@ -6,7 +6,6 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    system("cls");
 
     int opcion;
 
@@ -30,10 +29,6 @@ int main(int argc, char const *argv[])
             break;
 
         }
-
-        system("pause");
-        system("cls");
-        cout << endl;
         
     return 0;
 }
