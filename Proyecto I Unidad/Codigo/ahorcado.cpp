@@ -3,7 +3,6 @@
 #include <string.h>
 
 void juegoAhorcado(){
-
     char frase[60],rep[100],temporal[100];
     char pal;
     int longitud,i,j,inicial,acertado=0,temp=0,oportunidades=9;
@@ -109,6 +108,13 @@ void juegoAhorcado(){
     }
     printf("\n\n");
     system("PAUSE");
+}
+
+int ahorcado(){
+
+    juegoAhorcado();
 
     return 0;
 }
+
+
