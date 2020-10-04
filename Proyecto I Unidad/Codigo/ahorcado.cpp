@@ -1,15 +1,18 @@
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void juegoAhorcado(){
+using namespace std;
+
+int ahorcado(){
+
     char frase[60],rep[100],temporal[100];
     char pal;
     int longitud,i,j,inicial,acertado=0,temp=0,oportunidades=9;
     int repetido=0,gano=0;
-    printf("  **  JUEGO DEL AHORCADO  **\n\n");
-    printf("  Introduzca la palabra a adivinar: ");
-    gets(frase);
+    cout << "  **  JUEGO DEL AHORCADO  **\n\n Introduzca la palabra a adivinar: ";
+    cin >> frase;
     system("cls");
     longitud = 0;
     inicial = 0;
@@ -71,48 +74,41 @@ void juegoAhorcado(){
         }
         else
         {
-            printf("  Ya se ha introducido este caracter");
-            printf("\n\n");
+            cout << " Ya se ha introducido este caracter\n\n";
         }
-        printf("\n");
         for(i=0;i<strlen(temporal);i++)
         {
-            printf(" %c ",temporal[i]);
+            cout << " " << temporal[i];
         }
-        printf("\n");
+        cout << "\n";
         if(strcmp(frase,temporal) == 0)
         {
             gano = 1;
             break;
         }
-        printf("\n  Letras Acertadas: %d",acertado);
-        printf("\n  Oportunidades Restantes: %d",oportunidades);
-        printf("\n");
+        cout << "\n  Letras Acertadas: " << acertado;
+        cout << "\n  Oportunidades Restantes: " << oportunidades;
+        cout << "\n";
         rep[j] = pal;
         j++;
         if (oportunidades==0)
         {
            break;
         }
-        printf("  Introduzca una letra:");
-        scanf("\n%c",&pal);
+        cout << " Introduzca una letra: \n";
+        cin >> pal;
     }
     while(oportunidades != 0);
     if(gano)
     {
-        printf("\n\n  Enhorabuena, has ganado.");
+        cout << "\n\n  Enhorabuena, has ganado!!";
     }
     else
     {
-        printf("\n\n  Has perdido.");
+        cout << "\n\n  Has perdido!!";
     }
-    printf("\n\n");
+    cout << "\n\n";
     system("PAUSE");
-}
-
-int ahorcado(){
-
-    juegoAhorcado();
 
     return 0;
 }
